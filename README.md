@@ -1,1 +1,3 @@
-# Laboratory-work-11-sem3
+# Лабораторная работа 11: async, future, promise
+
+ИУ8 - 34 Шапран Алексей
