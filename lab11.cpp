@@ -11,8 +11,8 @@
 
 using namespace std;
 vector<map<int, int>> for_results;
-const string basepath = "C:\\Users\\й\\Desktop\\Образование\\МГТУ_Баумана_обучение\\Алгоритмические_языки\\3_Семестр\\Лабы\\lab11\\lab11\\F1";
-const string destpath = "C:\\Users\\й\\Desktop\\Образование\\МГТУ_Баумана_обучение\\Алгоритмические_языки\\3_Семестр\\Лабы\\lab11\\lab11\\F3";
+const string basepath = "C:\\Users\\Р№\\Desktop\\РћР±СЂР°Р·РѕРІР°РЅРёРµ\\РњР“РўРЈ_Р‘Р°СѓРјР°РЅР°_РѕР±СѓС‡РµРЅРёРµ\\РђР»РіРѕСЂРёС‚РјРёС‡РµСЃРєРёРµ_СЏР·С‹РєРё\\3_РЎРµРјРµСЃС‚СЂ\\Р›Р°Р±С‹\\lab11\\lab11\\F1";
+const string destpath = "C:\\Users\\Р№\\Desktop\\РћР±СЂР°Р·РѕРІР°РЅРёРµ\\РњР“РўРЈ_Р‘Р°СѓРјР°РЅР°_РѕР±СѓС‡РµРЅРёРµ\\РђР»РіРѕСЂРёС‚РјРёС‡РµСЃРєРёРµ_СЏР·С‹РєРё\\3_РЎРµРјРµСЃС‚СЂ\\Р›Р°Р±С‹\\lab11\\lab11\\F3";
 
 int main(void)
 {
@@ -20,7 +20,7 @@ int main(void)
 	std::vector<std::pair<int, int>> numbers;
 	ifstream fin;
 	fin.open("F2\\F2.txt");
-	// Получение задач из файла
+	// РџРѕР»СѓС‡РµРЅРёРµ Р·Р°РґР°С‡ РёР· С„Р°Р№Р»Р°
 	if (!fin.is_open())
 	{
 		cout << endl << "File wasn't opened!" << endl;
@@ -38,7 +38,7 @@ int main(void)
 	}
 	fin.close();
 	cout << endl << "Tasks count = " << numbers.size() << endl;
-	// Копирование файла
+	// РљРѕРїРёСЂРѕРІР°РЅРёРµ С„Р°Р№Р»Р°
 	for (const boost::filesystem::directory_entry& x : boost::filesystem::directory_iterator(basepath))
 	{
 		try
@@ -52,7 +52,7 @@ int main(void)
 		}
 	}
 	rename("F3\\F1.txt", "F3\\F3.txt");
-	// Вывод задач на экран
+	// Р’С‹РІРѕРґ Р·Р°РґР°С‡ РЅР° СЌРєСЂР°РЅ
 	cout << endl << "Tasks from file F2: " << endl;
 	for (auto it = numbers.begin(); it != numbers.end(); ++it)
 	{
@@ -66,7 +66,7 @@ int main(void)
 	int rest = { 0 };
 	bool is_prime = { false };
 	bool step2_1 = { false };
-	// Выбор шага
+	// Р’С‹Р±РѕСЂ С€Р°РіР°
 	if (numbers.size() % 4 == 0)
 	{
 		step = { 4 };
