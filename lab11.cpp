@@ -37,7 +37,7 @@ int main(void)
 		numbers.push_back(std::make_pair(temp1, temp2));
 	}
 	fin.close();
-	cout << endl << "Tasks count = " << numbers.size() << endl;
+	cout << endl << "Count of tasks: " << numbers.size() << endl;
 	// Копирование файла
 	for (const boost::filesystem::directory_entry& x : boost::filesystem::directory_iterator(basepath))
 	{
@@ -152,13 +152,12 @@ int main(void)
 			fout << it2->second << "\r\n";
 		}
 	}
-	if (size >= 10)
-		fout << "\r\r\r\r\r\r";
 	if (step2_1 == true)
 	{
 		shared_future<int> result = async(launch::async, solveOne, (--numbers.end())->first, (--numbers.end())->second);
 		cout << "result " << result.get() << endl;
 		fout << result.get();
+		fout << "\r\n";
 		fout << "\r\n";
 		fout.close();
 		system("pause");
@@ -169,5 +168,3 @@ int main(void)
 	system("pause");
 	return 0;
 }
-
-
